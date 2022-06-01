@@ -1,5 +1,5 @@
 <template>
-  <div>Hello {{ value }}!! Hi Harini from Azure Static Web apps</div>
+  <div>Hello Harini!! {{ message }}!! </div>
 </template>
 
 <script>
@@ -7,8 +7,12 @@ export default {
   name: "App",
   data() {
     return {
-      value: "World"
+      message: ""
     };
+  },
+  async mounted() {
+    const { text } = await (await fetch("/api/message")).json()
+    this.message = text
   }
 };
 </script>
