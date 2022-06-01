@@ -1,5 +1,5 @@
 <template>
-  <div>Hello {{ value }}!!</div>
+  <div>Hello {{ value }}!! Hi Harini from Azure Static Web apps</div>
 </template>
 
 <script>
